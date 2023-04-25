@@ -10,7 +10,7 @@ root.minsize(1200,700)
 root.maxsize(1200,700)
 
 #background img:
-img=Image.open("C:\\Users\\admin\\Documents\\GIT\\Voice_Assistant\\assis.jpg")
+img=Image.open("C:\\Users\\admin\\Documents\\GIT\\Voice_Assistant\\Tkinter_bg.jpg")
 resized_img=img.resize((1200,900))
 img=ImageTk.PhotoImage(resized_img)
 
@@ -32,7 +32,7 @@ def button_clicked():
     output_label.place(x=70,y=220)
 
 #Img for button
-img2=Image.open("C:\\Users\\admin\\Documents\\Python\\recorder.jpg")
+img2=Image.open("C:\\Users\\admin\\Documents\\GIT\\Voice_Assistant\\Speak_button.jpg")
 resized_2=img2.resize((80,80))
 img2=ImageTk.PhotoImage(resized_2)
 
