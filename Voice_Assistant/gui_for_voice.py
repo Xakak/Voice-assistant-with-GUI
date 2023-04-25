@@ -10,7 +10,7 @@ root.minsize(1200,700)
 root.maxsize(1200,700)
 
 #background img:
-img=Image.open("C:\\Users\\admin\\Documents\\Python\\assis.jpg")
+img=Image.open("C:\\Users\\admin\\Documents\\GIT\\Voice_Assistant\\assis.jpg")
 resized_img=img.resize((1200,900))
 img=ImageTk.PhotoImage(resized_img)
 
@@ -25,11 +25,11 @@ text_label.config(font=("Barlow", 40))
 
 def button_clicked():
     
-    process = subprocess.Popen(["python.exe","C:\\Users\\admin\\Documents\\Python\\main.py"], stdout=subprocess.PIPE)
+    process = subprocess.Popen(["python.exe","C:\\Users\\admin\\Documents\\GIT\\Voice_Assistant\\voice_assistant.py"], stdout=subprocess.PIPE)
     output, error = process.communicate()
     output_label.config(text=output.decode(),fg="white")
     output_label.config(font=("Georgia", 20))
-    output_label.place(x=120,y=590)
+    output_label.place(x=70,y=220)
 
 #Img for button
 img2=Image.open("C:\\Users\\admin\\Documents\\Python\\recorder.jpg")

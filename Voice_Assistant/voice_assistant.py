@@ -78,8 +78,11 @@ def run_alexa():
     elif "sleep" in command:
         os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
     elif 'joke' in command:
-        print(pyjokes.get_joke())
-        talk(pyjokes.get_joke())
+        joke=pyjokes.get_joke()
+        while len(joke)>35:
+            joke=pyjokes.get_joke()
+        print(joke)
+        talk(joke)
     elif 'google search' in command:
         query = command.replace("google search", "")
         pyautogui.hotkey('alt', 'd')
@@ -116,7 +119,7 @@ def run_alexa():
         talk('Please say the command again.')
 
 
-if __file__ == "C:\\Users\\admin\\Documents\\Python\\main.py":
+if __name__ == "__main__":
     run_alexa()
 
 
